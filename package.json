@@ -1,0 +1,32 @@
+{
+  "name": "algo-sorter",
+  "version": "1.0.3",
+  "description": "JS library for sorting arrays with different algorithms",
+  "main": "dist/algoSorter.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukehatcher/sorter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukehatcher/sorter/issues"
+  },
+  "homepage": "https://github.com/lukehatcher/sorter#readme",
+  "devDependencies": {
+    "eslint": "^7.15.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "jest": "^26.6.3",
+    "webpack": "^5.10.2",
+    "webpack-cli": "^4.2.0"
+  }
+}

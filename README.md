@@ -2,10 +2,12 @@
 *sort arrays using your algorithm of choice*
 
 ## Installation
-`npm install algo-sorter`
+```sh
+$ npm install algo-sorter
+```
 
 ## Importing
-```
+```javascript
 // Using Node.js `require()`
 const algoSorter = require('algo-sorter');
 
@@ -13,7 +15,7 @@ const algoSorter = require('algo-sorter');
 import algoSorter from 'algo-sorter';
 ```
 ## Import via script tag
-```
+```html
 <!DOCTYPE html>
 <html>
   <head>

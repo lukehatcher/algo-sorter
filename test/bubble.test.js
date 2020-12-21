@@ -19,7 +19,9 @@ describe('Bubble sort', () => {
   });
   it('should return nothing if array containes string', () => {
     const exampleArr = [1, 3, 5, 'hello'];
+    const exampleArr2 = [1, 3, 5, false];
     expect(algoSorter.bubble(exampleArr)).toBe(undefined);
+    expect(algoSorter.bubble(exampleArr2)).toBe(undefined);
   });
   it('should return nothing if array of objects containes key/val pair with not numerical val', () => {
     const exampleArr = [{id: 3}, {id: 'hello'}, {id: 9}, {id: 8}];

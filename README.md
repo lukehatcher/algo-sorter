@@ -21,16 +21,18 @@ import algoSorter from 'algo-sorter';
   <head>
   </head>
   <body>
-    <script src="YOUR_PATH_HERE/node_modules/algo-sorter/dist/algosorter.js"></script>
+    <script src="YOUR_PATH_HERE/node_modules/algo-sorter/dist/bundle.js"></script>
   </body>
 </html>
 ```
 
 ## Algorithms
 - bubble sort
+- insertion sort
 
 ## API
-`.bubble(array);`
+`.bubble(array)`
+`.insertion(array)`
 
 ## test
 `npm run test`

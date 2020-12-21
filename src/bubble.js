@@ -1,28 +1,42 @@
 const bubble = (arr, key) => {
   // if key is provided, the array is an array of objects
   if (key) {
-    for (let i = 0; i < arr.length; i++) {
-      for (let j = 0; j < arr.length; j++) {
-        // check that each item has the desired key
-        if (!arr[j][key] || typeof arr[j][key] !== 'number') {
+    for (let i = 0; i < arr.length - 1; i++) {
+      let movement = false;
+      for (let j = 0; j < arr.length - 1; j++) {
+        // check that each item has the desired key and type
+        if (!arr[j][key] || typeof arr[j][key] !== 'number'|| typeof arr[j + 1][key] !== 'number') {
           console.error('each item in the array must contain the provided key and its value must be a number');
           return;
+        } else if (arr[j][key] > arr[j + 1][key]) {
+          movement = true;
+          const temp = arr[j + 1][key];
+          arr[j + 1][key] = arr[j][key];
+          arr[j][key] = temp;
         }
-        if (arr[j] > arr[j + 1]) {
+      }
+      if (!movement) {
+        // sorted before (n^2)
+        return arr;
+      }
+    }
+  } else {
+    for (let i = 0; i < arr.length - 1; i++) {
+      let movement = false;
+      for (let j = 0; j < arr.length - 1; j++) {
+        if (typeof arr[j] !== 'number' || typeof arr[j + 1] !== 'number') {
+          console.error('all array items must be numbers');
+          return;
+        } else if (arr[j] > arr[j + 1]) {
+          movement = true;
           const temp = arr[j + 1];
           arr[j + 1] = arr[j];
           arr[j] = temp;
         }
       }
-    }
-  } else {
-    for (let i = 0; i < arr.length; i++) {
-      for (let j = 0; j < arr.length; j++) {
-        if (arr[j] > arr[j + 1]) {
-          const temp = arr[j + 1];
-          arr[j + 1] = arr[j];
-          arr[j] = temp;
-        }
+      if (!movement) {
+        // sorted before (n^2)
+        return arr;
       }
     }
   }
@@ -30,3 +44,10 @@ const bubble = (arr, key) => {
 };
 
 module.exports = bubble;
+
+// const exampleArr = [{id: 3}, {id: 1}, {id: 9}, {id: 8}];
+// console.log(bubble(exampleArr, 'id'));
+// const test = [1, 5, 4, 3, 0];
+// console.log(bubble(test));
+const test2 = [1, 3, 5, "hello"];
+console.log(bubble(test2));

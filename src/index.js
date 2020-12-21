@@ -1,5 +1,4 @@
-// import bubble from './bubble';
-
-// export { bubble };
 const bubble = require('./bubble');
-module.exports = { bubble };
+const insertion = require('./insertion');
+
+module.exports = { bubble, insertion };

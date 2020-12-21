@@ -2,7 +2,7 @@
   "name": "algo-sorter",
   "version": "1.0.3",
   "description": "JS library for sorting arrays with different algorithms",
-  "main": "dist/algoSorter.js",
+  "main": "dist/bundle.js",
   "directories": {
     "test": "tests"
   },
@@ -15,8 +15,8 @@
     "url": "git+https://github.com/lukehatcher/sorter.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Luke Hatcher",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/lukehatcher/sorter/issues"
   },

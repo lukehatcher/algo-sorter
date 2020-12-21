@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     globalObject: 'this',
-    filename: 'algoSorter.js',
+    filename: 'bundle.js',
     library: 'algoSorter',
     libraryTarget: 'umd',
   },

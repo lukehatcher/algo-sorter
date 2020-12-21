@@ -6,8 +6,8 @@ describe('Bubble sort', () => {
     expect(algoSorter.bubble(exampleArr)).toEqual(exampleArr.sort());
   });
   it('should numerically order an unordered array of objects', () => {
-    const exampleArr = [{id: 3}, {id: 1}, {id: 9}, {id: 8}];
-    const soln = [{id: 1}, {id: 3}, {id: 8}, {id: 9}];
+    const exampleArr = [{ id: 3 }, { id: 1 }, { id: 9 }, { id: 8 }];
+    const soln = [{ id: 1 }, { id: 3 }, { id: 8 }, { id: 9 }];
     const bubbled = algoSorter.bubble(exampleArr, 'id');
     let match = true;
     for (let i = 0; i < exampleArr.length; i++) {
@@ -24,8 +24,8 @@ describe('Bubble sort', () => {
     expect(algoSorter.bubble(exampleArr2)).toBe(undefined);
   });
   it('should return nothing if array of objects containes key/val pair with not numerical val', () => {
-    const exampleArr = [{id: 3}, {id: 'hello'}, {id: 9}, {id: 8}];
-    const exampleArr2 = [{id: 3}, {id: true}, {id: 9}, {id: 8}];
+    const exampleArr = [{ id: 3 }, { id: 'hello' }, { id: 9 }, { id: 8 }];
+    const exampleArr2 = [{ id: 3 }, { id: true }, { id: 9 }, { id: 8 }];
     expect(algoSorter.bubble(exampleArr)).toBe(undefined);
     expect(algoSorter.bubble(exampleArr2)).toBe(undefined);
   });

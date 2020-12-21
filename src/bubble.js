@@ -44,10 +44,3 @@ const bubble = (arr, key) => {
 };
 
 module.exports = bubble;
-
-// const exampleArr = [{id: 3}, {id: 1}, {id: 9}, {id: 8}];
-// console.log(bubble(exampleArr, 'id'));
-// const test = [1, 5, 4, 3, 0];
-// console.log(bubble(test));
-const test2 = [1, 3, 5, "hello"];
-console.log(bubble(test2));

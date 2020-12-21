@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   extends: [
     'airbnb-base',
@@ -14,8 +15,5 @@ module.exports = {
     'consistent-return': 'off',
     'no-plusplus': 'off',
     'no-console': 'off',
-  },
-  plugins: {
-    plugins: ['jest'],
   },
 };

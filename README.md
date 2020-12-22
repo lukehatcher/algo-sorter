@@ -29,18 +29,25 @@ import algoSorter from 'algo-sorter';
 ## Algorithms
 - bubble sort
 - insertion sort
+- selection sort
 
 ## API
-`.bubble(array)`
-`.insertion(array)`
+.bubble(array[, key])
+.insertion(array[, key])
+.selection(array[, key])
+### Parameters
+- `array` (required): A 1D array of numbers or an array of objects. If an array of objects is passed, a key must be provided.
+- `key` (optional): The key for the values that the array of objects will be sorted against
 
 ## test
 `npm run test`
 
 ## TODO
-- [] write tests
-- [] license
-- [] API documentation table
-- [] add algos
-- [] optimize imports
-- [] optimize html script tag import with https://unpkg.com/
+- [ ] write tests
+- [ ] license
+- [ ] API documentation table
+- [ ] add algos
+- [ ] optimize imports
+- [ ] optimize html script tag import with https://unpkg.com/
+- [ ] rearange npm dependencies
+- [ ] handle arrays of length zero and non arrays

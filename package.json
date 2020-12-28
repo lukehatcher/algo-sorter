@@ -15,7 +15,16 @@
     "type": "git",
     "url": "git+https://github.com/lukehatcher/sorter.git"
   },
-  "keywords": ["sorting", "algorithms", "typescript", "javascript", "node", "bubble", "insertion", "selection"],
+  "keywords": [
+    "sorting",
+    "algorithms",
+    "typescript",
+    "javascript",
+    "node",
+    "bubble",
+    "insertion",
+    "selection"
+  ],
   "author": "Luke Hatcher",
   "license": "MIT",
   "bugs": {
@@ -23,17 +32,18 @@
   },
   "homepage": "https://github.com/lukehatcher/sorter#readme",
   "devDependencies": {
+    "@babel/core": "^7.12.10",
     "@types/jest": "^26.0.19",
-    "eslint": "^7.15.0",
+    "@typescript-eslint/eslint-plugin": "^4.11.0",
+    "@typescript-eslint/parser": "^4.11.0",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.16.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1",
     "jest": "^26.6.3",
     "ts-jest": "^26.4.4",
     "ts-loader": "^8.0.12",
     "webpack": "^5.10.2",
-    "webpack-cli": "^4.2.0",
-    "@babel/core": "^7.12.10",
-    "babel-loader": "^8.2.2"
+    "webpack-cli": "^4.2.0"
   },
   "dependencies": {
     "@types/babel__core": "^7.1.12",

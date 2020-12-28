@@ -33,28 +33,25 @@ import algoSorter from 'algo-sorter';
 - insertion sort
 - selection sort
 - quick sort
+- merge sort (coming soon)
+- heap sort (coming soon)
+- radix sort (coming soon)
 
 ## API
-- .bubble(array[, key])
-- .insertion(array[, key])
-- .selection(array[, key])
-- .quick(array[, key[, low [, high]]])
-
-## API
-- **.bubble(array[, key])**
-- **.insertion(array[, key])**
-- **.selection(array[, key])**
+**.bubble(array[, key])**<br>
+**.insertion(array[, key])**<br>
+**.selection(array[, key])**<br>
 - `array` (required): A 1D array of numbers or an array of objects. If an array of objects is passed, a key must be provided.
 - `key` (optional): The key for the values that the array of objects will be sorted against
 
-- **.quick(array[, key[, low [, high]]])**
+**.quick(array[, key[, low [, high]]])**<br>
 - `array` (required: number[] | any[]): A 1D array of numbers or an array of objects. If an array of objects is passed, a key must be provided.
 - `key` (optional/required: string): The key for the values that the array of objects will be sorted against. If you want to configure the `high` and `low` sorting conditions for an array of numbers you *must* pass `null`.
 - `low` (optional: number): The starting index. Defaults to `0`. 
 - `high` (optional: number): The ending index. Defaults to `array.length - 1`.
 
 ## TODO
-- [ ] write tests
+- [ ] write tests, add ci
 - [ ] API documentation table
 - [ ] add algos
 - [ ] optimize imports

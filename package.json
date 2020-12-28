@@ -1,8 +1,9 @@
 {
   "name": "algo-sorter",
-  "version": "1.0.3",
-  "description": "JS library for sorting arrays with different algorithms",
-  "main": "dist/bundle.js",
+  "version": "1.1.0",
+  "description": "JS/TS library for sorting arrays with different algorithms",
+  "main": "dist/algoSorter.js",
+  "types": "dist/index.d.ts",
   "directories": {
     "test": "tests"
   },
@@ -14,7 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/lukehatcher/sorter.git"
   },
-  "keywords": [],
+  "keywords": ["sorting", "algorithms", "typescript", "javascript", "node", "bubble", "insertion", "selection"],
   "author": "Luke Hatcher",
   "license": "MIT",
   "bugs": {
@@ -22,12 +23,24 @@
   },
   "homepage": "https://github.com/lukehatcher/sorter#readme",
   "devDependencies": {
+    "@types/jest": "^26.0.19",
     "eslint": "^7.15.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "jest": "^26.6.3",
+    "ts-jest": "^26.4.4",
+    "ts-loader": "^8.0.12",
     "webpack": "^5.10.2",
-    "webpack-cli": "^4.2.0"
+    "webpack-cli": "^4.2.0",
+    "@babel/core": "^7.12.10",
+    "babel-loader": "^8.2.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@types/babel__core": "^7.1.12",
+    "@types/estree": "0.0.45",
+    "@types/json-schema": "^7.0.6",
+    "@types/prettier": "^2.1.6",
+    "async": "^3.2.0",
+    "typescript": "^4.1.3"
+  }
 }

@@ -26,7 +26,7 @@ describe('Selection sort', () => {
   it('should return nothing if array of objects containes key/val pair with not numerical val', () => {
     const exampleArr = [{ id: 3 }, { id: 'hello' }, { id: 9 }, { id: 8 }];
     const exampleArr2 = [{ id: 3 }, { id: true }, { id: 9 }, { id: 8 }];
-    expect(selection(exampleArr)).toBe(undefined);
-    expect(selection(exampleArr2)).toBe(undefined);
+    expect(selection(exampleArr, 'id')).toBe(undefined);
+    expect(selection(exampleArr2, 'id')).toBe(undefined);
   });
 });

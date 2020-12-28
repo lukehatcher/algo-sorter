@@ -26,7 +26,7 @@ describe('Bubble sort', () => {
   it('should return nothing if array of objects containes key/val pair with not numerical val', () => {
     const exampleArr = [{ id: 3 }, { id: 'hello' }, { id: 9 }, { id: 8 }];
     const exampleArr2 = [{ id: 3 }, { id: true }, { id: 9 }, { id: 8 }];
-    expect(bubble(exampleArr)).toBe(undefined);
-    expect(bubble(exampleArr2)).toBe(undefined);
+    expect(bubble(exampleArr, 'id')).toBe(undefined);
+    expect(bubble(exampleArr2, 'id')).toBe(undefined);
   });
 });

@@ -1,1 +1,1 @@
-export default function bubble(arr: any[], key: number): any[];
+export default function bubble(arr: any[], key?: string): any[];

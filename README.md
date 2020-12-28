@@ -1,7 +1,7 @@
 # algo-sorter
 *sort arrays using your algorithm of choice*
 
-Now with TypeScript support!
+Compatible with JavaScript, TypeScript, Node.js and the browser.
 
 ## Installation
 ```sh
@@ -37,6 +37,7 @@ import algoSorter from 'algo-sorter';
 - .bubble(array[, key])
 - .insertion(array[, key])
 - .selection(array[, key])
+
 ### Parameters
 - `array` (required): A 1D array of numbers or an array of objects. If an array of objects is passed, a key must be provided.
 - `key` (optional): The key for the values that the array of objects will be sorted against

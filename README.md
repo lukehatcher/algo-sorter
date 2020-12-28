@@ -1,6 +1,8 @@
 # algo-sorter
 *sort arrays using your algorithm of choice*
 
+Now with TypeScript support!
+
 ## Installation
 ```sh
 $ npm install algo-sorter
@@ -11,7 +13,7 @@ $ npm install algo-sorter
 // Using Node.js `require()`
 const algoSorter = require('algo-sorter');
 
-// Using ES6 imports
+// Using ES6/TypeScript imports
 import algoSorter from 'algo-sorter';
 ```
 ## Import via script tag
@@ -21,7 +23,7 @@ import algoSorter from 'algo-sorter';
   <head>
   </head>
   <body>
-    <script src="YOUR_PATH_HERE/node_modules/algo-sorter/dist/bundle.js"></script>
+    <script src="YOUR_PATH_HERE/node_modules/algo-sorter/dist/algoSorter.js"></script>
   </body>
 </html>
 ```
@@ -39,9 +41,6 @@ import algoSorter from 'algo-sorter';
 - `array` (required): A 1D array of numbers or an array of objects. If an array of objects is passed, a key must be provided.
 - `key` (optional): The key for the values that the array of objects will be sorted against
 
-## test
-`npm run test`
-
 ## TODO
 - [ ] write tests
 - [ ] API documentation table
@@ -50,4 +49,3 @@ import algoSorter from 'algo-sorter';
 - [ ] optimize html script tag import with https://unpkg.com/
 - [ ] rearange npm dependencies
 - [ ] handle arrays of length zero and non arrays
-- [ ] typescript support

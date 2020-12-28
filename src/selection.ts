@@ -1,4 +1,4 @@
-const selection = (arr, key) => {
+export default function selection(arr: any[], key: string) {
   if (key) {
     for (let i = 0; i < arr.length; i++) {
       if (typeof arr[i][key] !== 'number' || !arr[i][key]) {
@@ -45,7 +45,7 @@ const selection = (arr, key) => {
   return arr;
 };
 // const a = [1, 5, 7, 3, 5];
-const b = [{ id: 5 }, { id: 3 }, { id: 2 }];
-console.log(selection(b, 'id'));
+// const b = [{ id: 5 }, { id: 3 }, { id: 2 }];
+// console.log(selection(b, 'id'));
 
-module.exports = selection;
+// module.exports = selection;

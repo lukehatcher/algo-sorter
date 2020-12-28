@@ -1,0 +1,17 @@
+# source code
+src/
+
+# compiler/bundler
+tsconfig.json
+webpack.config.js
+
+# testing
+test/
+coverage/
+jest.config.js
+
+# linting
+.eslintrc.js
+
+*.log
+

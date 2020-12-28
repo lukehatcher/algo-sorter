@@ -1,4 +1,4 @@
-const insertion = (arr, key) => {
+export default function insertion(arr: any[], key: string) {
   if (key) {
     for (let i = 0; i < arr.length; i++) {
       if (!arr[i][key] || typeof arr[i][key] !== 'number') {
@@ -31,4 +31,4 @@ const insertion = (arr, key) => {
   return arr;
 };
 
-module.exports = insertion;
+// module.exports = insertion;

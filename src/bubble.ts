@@ -1,4 +1,4 @@
-const bubble = (arr, key) => {
+export default function bubble(arr: any[], key: number) {
   // if key is provided, the array is an array of objects
   if (key) {
     for (let i = 0; i < arr.length - 1; i++) {
@@ -43,4 +43,4 @@ const bubble = (arr, key) => {
   return arr;
 };
 
-module.exports = bubble;
+// module.exports = bubble;

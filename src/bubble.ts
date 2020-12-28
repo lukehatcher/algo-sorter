@@ -1,14 +1,14 @@
-export default function bubble(arr: any[], key: number) {
+export default function bubble(arr: any[], key?: string) {
   // if key is provided, the array is an array of objects
   if (key) {
     for (let i = 0; i < arr.length - 1; i++) {
       let movement = false;
       for (let j = 0; j < arr.length - 1; j++) {
         // check that each item has the desired key and type
-        if (!arr[j][key] || typeof arr[j][key] !== 'number'|| typeof arr[j + 1][key] !== 'number') {
+        if (!arr[j][key] || typeof arr[j][key] !== 'number' || typeof arr[j + 1][key] !== 'number') {
           console.error('each item in the array must contain the provided key and its value must be a number');
           return;
-        } else if (arr[j][key] > arr[j + 1][key]) {
+        } if (arr[j][key] > arr[j + 1][key]) {
           movement = true;
           const temp = arr[j + 1][key];
           arr[j + 1][key] = arr[j][key];
@@ -27,7 +27,7 @@ export default function bubble(arr: any[], key: number) {
         if (typeof arr[j] !== 'number' || typeof arr[j + 1] !== 'number') {
           console.error('all array items must be numbers');
           return;
-        } else if (arr[j] > arr[j + 1]) {
+        } if (arr[j] > arr[j + 1]) {
           movement = true;
           const temp = arr[j + 1];
           arr[j + 1] = arr[j];
@@ -41,6 +41,6 @@ export default function bubble(arr: any[], key: number) {
     }
   }
   return arr;
-};
+}
 
 // module.exports = bubble;

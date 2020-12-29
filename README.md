@@ -38,23 +38,30 @@ import algoSorter from 'algo-sorter';
 - radix sort (coming soon)
 
 ## API
-**.bubble(array[, key])**<br>
-**.insertion(array[, key])**<br>
-**.selection(array[, key])**<br>
-- `array` (required): A 1D array of numbers or an array of objects. If an array of objects is passed, a key must be provided.
-- `key` (optional): The key for the values that the array of objects will be sorted against
+`.bubble(array[, key])`<br>
+`.insertion(array[, key])`<br>
+`.selection(array[, key])`<br>
 
-**.quick(array[, key[, low [, high]]])**<br>
-- `array` (required: number[] | any[]): A 1D array of numbers or an array of objects. If an array of objects is passed, a key must be provided.
-- `key` (optional/required: string): The key for the values that the array of objects will be sorted against. If you want to configure the `high` and `low` sorting conditions for an array of numbers you *must* pass `null`.
-- `low` (optional: number): The starting index. Defaults to `0`. 
-- `high` (optional: number): The ending index. Defaults to `array.length - 1`.
+parameter | type | required | default | notes
+----------|------|----------|------
+`array` | number[] or obj[] | y | - | A 1D array of numbers or an array of objects. If an array of objects is passed, a key *must* be provided.
+`key` | string | n | - | The key for the values that the array of objects will be sorted against
+
+`.quick(array[, key[, low [, high]]])`<br>
+
+parameter | type | required | default | notes
+----------|------|----------|---------|------
+`array` | number[] or obj[] | y | - | A 1D array of numbers or an array of objects. If an array of objects is passed, a key *must* be provided.
+`key` | string | n | - |The key for the values that the array of objects will be sorted against. If you want to configure the `high` and `low` sorting conditions for an array of numbers you *must* pass `null`.
+`low` | number | n | `0` | The starting index.
+`high` | number | n | `array.length - 1` | The ending index.
+
 
 ## TODO
-- [ ] write tests, add ci
-- [ ] API documentation table
 - [ ] add algos
+- [ ] write tests, add ci
+- [ ] IMPROVE API DOCS
+- [ ] badges
 - [ ] optimize imports
 - [ ] optimize html script tag import with https://unpkg.com/
-- [ ] rearange npm dependencies
 - [ ] handle arrays of length zero and non arrays

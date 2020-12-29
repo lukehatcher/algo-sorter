@@ -43,7 +43,7 @@ import algoSorter from 'algo-sorter';
 `.selection(array[, key])`<br>
 
 parameter | type | required | default | notes
-----------|------|----------|------
+----------|------|----------|---------|------
 `array` | number[] or obj[] | y | - | A 1D array of numbers or an array of objects. If an array of objects is passed, a key *must* be provided.
 `key` | string | n | - | The key for the values that the array of objects will be sorted against
 
@@ -60,7 +60,7 @@ parameter | type | required | default | notes
 ## TODO
 - [ ] add algos
 - [ ] write tests, add ci
-- [ ] IMPROVE API DOCS
+- [ ] improve api docs
 - [ ] badges
 - [ ] optimize imports
 - [ ] optimize html script tag import with https://unpkg.com/

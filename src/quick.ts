@@ -3,7 +3,7 @@ export default function quick(
   key?: string | null,
   low: number = 0, // left starting point for pointers
   high: number = array.length - 1, // right tarting point for pointers
-) {
+): any[] {
   if (key) {
     const partition = (arr: number[], left: number, right: number) => {
       const pivot = arr[Math.floor((right + left) / 2)][key]; // middle

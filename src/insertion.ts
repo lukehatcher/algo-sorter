@@ -1,4 +1,4 @@
-export default function insertion(arr: any[], key?: string) {
+export default function insertion(arr: any[], key?: string): any[] {
   if (key) {
     for (let i = 0; i < arr.length; i++) {
       if (!arr[i][key] || typeof arr[i][key] !== 'number') {

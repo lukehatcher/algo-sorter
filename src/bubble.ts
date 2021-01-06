@@ -1,4 +1,4 @@
-export default function bubble(arr: any[], key?: string) {
+export default function bubble(arr: any[], key?: string): any[] {
   // if key is provided, the array is an array of objects
   if (key) {
     for (let i = 0; i < arr.length - 1; i++) {

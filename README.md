@@ -1,11 +1,17 @@
 # algo-sorter
 *sort arrays using your algorithm of choice*
 
-Compatible with JavaScript, TypeScript, Node.js and the browser.
+- works with numeric arrays as well as arrays of objects
+- Compatible with JavaScript, TypeScript, Node.js and the browser.
 
 ## Installation
+with npm:
 ```sh
 $ npm install algo-sorter
+```
+with yarn:
+```sh
+$ yarn add algo-sorter
 ```
 
 ## Importing
@@ -28,15 +34,32 @@ import algoSorter from 'algo-sorter';
 </html>
 ```
 
+## Example implementation
+```javascript
+import { bubble } from 'algo-sorter';
+
+const myArray = [6, 10, 3];
+const myArray2 = [{myKey: 6}, {myKey: 10}, {myKey: 3}];
+
+bubble(myArray); // [3, 6, 10]
+bubble(myArray2, 'myKey'); // [{myKey: 3}, {myKey: 6}, {myKey: 10}]
+```
+
 ## Algorithms
+**comparison based algorithms:**
 - bubble sort
 - insertion sort
 - selection sort
-- quick sort<br>
-**divide and conqure algorithms:**<br>
-- merge sort
-- heap sort (coming soon)
+- heap sort<br>
+
+**divide and conqure algorithms:**
+- quick sort
+- merge sort<br>
+
+**coming soon:**
 - radix sort (coming soon)
+- bucket sort (coming soon)
+- counting sort (coming soon)
 
 ## API
 `bubble(array[, key])`<br>
@@ -58,9 +81,18 @@ parameter | type | required | default | notes
 `low` | number | n | `0` | The starting index.
 `high` | number | n | `array.length - 1` | The ending index.
 
+## Testing with node
+```sh
+$ git clone https://github.com/lukehatcher/algo-sorter.git
+$ cd algo-sorter && npm i && npm run test
+```
+
+## Contributions and issues
+Pull requests are welcome! Please include tests. Found an error or want to ask a question? Open an [issue](https://github.com/lukehatcher/algo-sorter/issues) and/or visit the [discussion boards](https://github.com/lukehatcher/algo-sorter/discussions)! :D
 
 ## TODO
 - [ ] add algos
+- [ ] create repo logo
 - [ ] write tests, add ci
 - [ ] improve api docs
 - [ ] badges

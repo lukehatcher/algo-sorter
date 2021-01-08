@@ -32,8 +32,8 @@ import algoSorter from 'algo-sorter';
 - bubble sort
 - insertion sort
 - selection sort
-- quick sort
-divide and conqure algorithms:
+- quick sort<br>
+**divide and conqure algorithms:**<br>
 - merge sort
 - heap sort (coming soon)
 - radix sort (coming soon)

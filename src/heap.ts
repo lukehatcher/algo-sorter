@@ -109,9 +109,3 @@ export default function heap(array: any[], key?: string): any[] {
   }
   return array;
 }
-
-// test cases
-// console.log(heap([{id: 1}, {id: 5}, {id: 8}, {id: 4}, {id: 3}, {id: 0}], 'id'));
-// console.log(heap([{id: 1}, {id: 5}, {id: 8}, {id: 4}, {id: 3}, {id: 'hi'}], 'id')); // should error
-// console.log(heap([3, 5, 4, 6, 13, 10, 9, 8, 15, 17]));
-// console.log(heap([3, 5, 4, 6, 13, 10, 9, 8, 'hi', 17])); // should error

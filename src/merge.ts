@@ -1,15 +1,18 @@
 export default function merge(array: any[], key?: string): any[] {
   if (key) {
-    function mergeSortWithKey(array) {
-      const midpoint = array.length / 2;
+    const mergeSortWithKey = (array: any[]): any[] => {
+      const midpoint = Math.floor(array.length) / 2;
       if (array.length === 1) return array; // base case
     
       const left = array.splice(0, midpoint);
       return mergeTwoArraysWithKey(mergeSortWithKey(left), mergeSortWithKey(array));
     }
-    function mergeTwoArraysWithKey(left: any[], right: any[]): any[] {
+    const mergeTwoArraysWithKey = (left: any[], right: any[]): any[] => {
       let merged = [];
       while (left.length && right.length) {
+        if (typeof left[0][key] !== 'number' || typeof right[0][key] !== 'number') {
+          throw new Error('all key values of array shoud be of type number');
+        }
         if (left[0][key] < right[0][key]) {
           merged.push(left[0]);
           left.shift();
@@ -24,17 +27,20 @@ export default function merge(array: any[], key?: string): any[] {
     array = mergeSortWithKey(array);
 
   } else {
-    function mergeSortNoKey(array) {
-      const midpoint = array.length / 2;
+    const mergeSortNoKey = (array: number[]): number[] => {
+      const midpoint = Math.floor(array.length) / 2;
       if (array.length === 1) return array; // base case
     
       const left = array.splice(0, midpoint);
       return mergeTwoArrays(mergeSortNoKey(left), mergeSortNoKey(array));
     }
 
-    function mergeTwoArrays(left: any[], right: any[]): any[] {
+    const mergeTwoArrays = (left: number[], right: number[]): number[] => {
       let merged = [];
       while (left.length && right.length) {
+        if (typeof left[0] !== 'number' || typeof right[0] !== 'number') {
+          throw new Error('all elements of array shoud be of type number');
+        }
         if (left[0] < right[0]) {
           merged.push(left[0]);
           left.shift();
@@ -50,17 +56,3 @@ export default function merge(array: any[], key?: string): any[] {
   }
   return array;
 }
-
-
-
-https://stackabuse.com/merge-sort-in-javascript/
-
-// test cases
-
-// const ans = merge([22, 44, 1, 11, 8, 9]);
-// console.log(ans);
-const a = [{id: 22}, {id: 44}, {id: 1}, {id: 11}, {id: 8}, {id: 9}];
-
-const ans = merge(a, 'id');
-console.log(ans);
-

@@ -36,6 +36,11 @@ export default function heap(array: any[], key?: string): any[] {
       const myMaxHeap = buildMaxHeapWithKey(array, array.length);
 
       for (let i = myMaxHeap.length - 1; i >= 0; i--) {
+        // type check
+        if (typeof array[i][key] !== 'number') {
+          const errorMessage = `expected the key value of element ${i} of input array to be of type number, got ${array[i][key]} instead`;
+          throw new Error(errorMessage);
+        }
         // swap to remove max element
         let temp = myMaxHeap[0]
         myMaxHeap[0] = myMaxHeap[i]
@@ -82,9 +87,14 @@ export default function heap(array: any[], key?: string): any[] {
     }
 
     const heapSort = (array: number[]): number[] => {
-      const myMaxHeap = buildMaxHeap(array, array.length);
+      let myMaxHeap = buildMaxHeap(array, array.length);
 
       for (let i = myMaxHeap.length - 1; i >= 0; i--) {
+        // type check
+        if (typeof array[i] !== 'number') {
+          const errorMessage = `expected element ${i} of input array to be of type number, got ${array[i]} instead`;
+          throw new Error(errorMessage);
+        }
         // swap to remove max element
         let temp = myMaxHeap[0]
         myMaxHeap[0] = myMaxHeap[i]
@@ -94,12 +104,14 @@ export default function heap(array: any[], key?: string): any[] {
         heapify(myMaxHeap, i, 0);
       }
       return myMaxHeap // now sorted
-    }
+    } // end
     heapSort(array);
   }
   return array;
 }
 
 // test cases
-console.log(heap([{id: 1}, {id: 5}, {id: 8}, {id: 4}, {id: 3}, {id: 0}], 'id'));
+// console.log(heap([{id: 1}, {id: 5}, {id: 8}, {id: 4}, {id: 3}, {id: 0}], 'id'));
+// console.log(heap([{id: 1}, {id: 5}, {id: 8}, {id: 4}, {id: 3}, {id: 'hi'}], 'id')); // should error
 // console.log(heap([3, 5, 4, 6, 13, 10, 9, 8, 15, 17]));
+// console.log(heap([3, 5, 4, 6, 13, 10, 9, 8, 'hi', 17])); // should error

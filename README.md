@@ -1,4 +1,4 @@
-# algo-sorter
+# algoSorter
 *sort arrays using your algorithm of choice*
 
 - works with numeric arrays as well as arrays of objects
@@ -34,27 +34,16 @@ import algoSorter from 'algo-sorter';
 </html>
 ```
 
-## Example implementation
-```javascript
-import { bubble } from 'algo-sorter';
-
-const myArray = [6, 10, 3];
-const myArray2 = [{myKey: 6}, {myKey: 10}, {myKey: 3}];
-
-bubble(myArray); // [3, 6, 10]
-bubble(myArray2, 'myKey'); // [{myKey: 3}, {myKey: 6}, {myKey: 10}]
-```
-
 ## Algorithms
 **comparison based algorithms:**
 - bubble sort
 - insertion sort
 - selection sort
-- heap sort<br>
+- heap sort
 
 **divide and conqure algorithms:**
 - quick sort
-- merge sort<br>
+- merge sort
 
 **coming soon:**
 - radix sort (coming soon)
@@ -66,6 +55,7 @@ bubble(myArray2, 'myKey'); // [{myKey: 3}, {myKey: 6}, {myKey: 10}]
 `insertion(array[, key])`<br>
 `selection(array[, key])`<br>
 `merge(array[, key])`<br>
+`heap(array[, key])`<br>
 
 parameter | type | required | default | notes
 ----------|------|----------|---------|------
@@ -81,21 +71,32 @@ parameter | type | required | default | notes
 `low` | number | n | `0` | The starting index.
 `high` | number | n | `array.length - 1` | The ending index.
 
-## Testing with node
-```sh
+## Example implementation
+```javascript
+import { bubble } from 'algo-sorter';
+
+const myArray = [6, 10, 3];
+const myArray2 = [{myKey: 6}, {myKey: 10}, {myKey: 3}];
+
+bubble(myArray); // [3, 6, 10]
+bubble(myArray2, 'myKey'); // [{myKey: 3}, {myKey: 6}, {myKey: 10}]
+```
+
+## Testing with Node
+```
 $ git clone https://github.com/lukehatcher/algo-sorter.git
 $ cd algo-sorter && npm i && npm run test
 ```
 
 ## Contributions and issues
-Pull requests are welcome! Please include tests. Found an error or want to ask a question? Open an [issue](https://github.com/lukehatcher/algo-sorter/issues) and/or visit the [discussion boards](https://github.com/lukehatcher/algo-sorter/discussions)! :D
+Pull requests are welcome! Please include tests. Found an error or want to ask a question? Open an [issue](https://github.com/lukehatcher/algo-sorter/issues) and/or visit the [discussion boards](https://github.com/lukehatcher/algo-sorter/discussions)!
 
-## TODO
+#### todos
 - [ ] add algos
-- [ ] create repo logo
+- [ ] handle arrays of length zero and non arrays
 - [ ] write tests, add ci
 - [ ] improve api docs
-- [ ] badges
-- [ ] optimize imports
 - [ ] optimize html script tag import with https://unpkg.com/
-- [ ] handle arrays of length zero and non arrays
+- [ ] badges
+- [ ] create repo logo?
+- [ ] up/down

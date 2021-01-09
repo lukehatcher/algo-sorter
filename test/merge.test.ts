@@ -4,8 +4,11 @@ describe('merge sort', () => {
   it('should numerically order an unordered array', () => {
     const exampleArr = [1, 3, 5, 9, 4, 2, 8, 1];
 
-    // console.log(exampleArr.sort());
-    // console.log(merge(exampleArr));
+    // only passed test if these two log statments are fired
+
+    console.log(exampleArr.sort());
+    console.log(merge(exampleArr));
+    
     expect(merge(exampleArr)).toEqual(exampleArr.sort());
 
   });

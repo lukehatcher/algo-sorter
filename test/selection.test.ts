@@ -17,16 +17,20 @@ describe('Selection sort', () => {
     }
     expect(match).toBe(true);
   });
-  it('should return nothing if array containes string', () => {
+  it('should throw error if array is empty', () => {
+    expect(() => selection([])).toThrow(Error);
+    expect(() => selection([], 'key')).toThrow(Error);
+  });
+  it('should throw error if array containes string', () => {
     const exampleArr = [1, 3, 5, 'hello'];
     const exampleArr2 = [1, 3, 5, false];
-    expect(selection(exampleArr)).toBe(undefined);
-    expect(selection(exampleArr2)).toBe(undefined);
+    expect(() => selection(exampleArr)).toThrow(Error);
+    expect(() => selection(exampleArr2)).toThrow(Error);
   });
-  it('should return nothing if array of objects containes key/val pair with not numerical val', () => {
+  it('should throw error if array of objects containes key/val pair with not numerical val', () => {
     const exampleArr = [{ id: 3 }, { id: 'hello' }, { id: 9 }, { id: 8 }];
     const exampleArr2 = [{ id: 3 }, { id: true }, { id: 9 }, { id: 8 }];
-    expect(selection(exampleArr, 'id')).toBe(undefined);
-    expect(selection(exampleArr2, 'id')).toBe(undefined);
+    expect(() => selection(exampleArr, 'id')).toThrow(Error);
+    expect(() => selection(exampleArr2, 'id')).toThrow(Error);
   });
 });

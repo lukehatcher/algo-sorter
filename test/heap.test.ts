@@ -17,19 +17,19 @@ describe('Heap sort', () => {
     }
     expect(match).toBe(true);
   });
+  it('should throw error if array is empty', () => {
+    expect(() => heap([])).toThrow(Error);
+    expect(() => heap([], 'key')).toThrow(Error);
+  });
   it('should throw error if array containes string', () => {
     const exampleArr = [1, 3, 5, 'hello'];
     const exampleArr2 = [1, 3, 5, false];
-    // expect(heap(exampleArr)).toBe(undefined);
-    // expect(heap(exampleArr2)).toBe(undefined);
     expect(() => {heap(exampleArr)}).toThrow(Error);
     expect(() => {heap(exampleArr2)}).toThrow(Error);
   });
   it('should throw error if array of objects containes key/val pair with not numerical val', () => {
     const exampleArr = [{ id: 3 }, { id: 'hello' }, { id: 9 }, { id: 8 }];
     const exampleArr2 = [{ id: 3 }, { id: true }, { id: 9 }, { id: 8 }];
-    // expect(heap(exampleArr, 'id')).toBe(undefined);
-    // expect(heap(exampleArr2, 'id')).toBe(undefined);
     expect(() => {heap(exampleArr, 'id')}).toThrow(Error);
     expect(() => {heap(exampleArr2, 'id')}).toThrow(Error);
   });

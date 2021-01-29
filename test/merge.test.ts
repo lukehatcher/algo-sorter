@@ -24,6 +24,10 @@ describe('merge sort', () => {
     }
     expect(match).toBe(true);
   });
+  it('should throw error if array is empty', () => {
+    expect(() => merge([])).toThrow(Error);
+    expect(() => merge([], 'key')).toThrow(Error);
+  });
   it('should throw error if array containes string', () => {
     const exampleArr = [1, 3, 5, 'hello'];
     const exampleArr2 = [1, 3, 5, false];

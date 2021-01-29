@@ -17,16 +17,20 @@ describe('Quick sort', () => {
     }
     expect(match).toBe(true);
   });
-  it('should return nothing if array containes string', () => {
+  it('should throw error if array is empty', () => {
+    expect(() => quick([])).toThrow(Error);
+    expect(() => quick([], 'key')).toThrow(Error);
+  });
+  it('should throw error if array containes string', () => {
     const exampleArr = [1, 3, 5, 'hello', 1];
     const exampleArr2 = [1, 3, 5, false];
-    expect(quick(exampleArr)).toBe(undefined);
-    expect(quick(exampleArr2)).toBe(undefined);
+    expect(() => quick(exampleArr)).toThrow(Error);
+    expect(() => quick(exampleArr2)).toThrow(Error);
   });
-  it('should return nothing if array of objects containes key/val pair with not numerical val', () => {
+  it('should throw error if array of objects containes key/val pair with not numerical val', () => {
     const exampleArr = [{ id: 3 }, { id: 'hello' }, { id: 9 }, { id: 8 }];
     const exampleArr2 = [{ id: 3 }, { id: true }, { id: 9 }, { id: 8 }];
-    expect(quick(exampleArr, 'id')).toBe(undefined);
-    expect(quick(exampleArr2, 'id')).toBe(undefined);
+    expect(() => quick(exampleArr, 'id')).toThrow(Error);
+    expect(() => quick(exampleArr2, 'id')).toThrow(Error);
   });
 });

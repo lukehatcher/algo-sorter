@@ -4,27 +4,25 @@ export default function quick(
   low: number = 0, // left starting point for pointers
   high: number = array.length - 1, // right tarting point for pointers
 ): any[] {
+  if (!array.length) throw new Error('must provide a non-empty array');
   if (key) {
     const partition = (arr: number[], left: number, right: number) => {
       const pivot = arr[Math.floor((right + left) / 2)][key]; // middle
       if (typeof pivot !== 'number') {
-        array = undefined;
-        return;
+        throw new Error('all iterable items must be of type number');
       }
 
       while (left <= right) {
         while (arr[left][key] < pivot) {
           if (typeof arr[left][key] !== 'number') {
-            array = undefined;
-            return;
+            throw new Error('all iterable items must be of type number');
           }
           left++;
         }
         
         while (arr[right][key] > pivot) {
           if (typeof arr[right][key] !== 'number') {
-            array = undefined;
-            return;
+            throw new Error('all iterable items must be of type number');
           }
           right--;
         }
@@ -53,35 +51,36 @@ export default function quick(
   const partition = (arr: number[], left: number, right: number) => {
     const pivot = arr[Math.floor((right + left) / 2)]; // middle
     if (typeof pivot !== 'number') {
-      array = undefined;
-      return;
+      throw new Error('all iterable items must be of type number');
     }
 
     while (left <= right) {
       // if (typeof arr[left] !== 'number' || typeof arr[right] !== 'number') return;
       while (arr[left] < pivot) {
         if (typeof arr[left] !== 'number') {
-          array = undefined;
-          return;
+          throw new Error('all iterable items must be of type number');
         }
         left++;
       }
       while (arr[right] > pivot) {
         if (typeof arr[right] !== 'number') {
-          array = undefined;
-          return;
+          throw new Error('all iterable items must be of type number');
         }
         right--;
       }
 
       if (left <= right) {
-        if (typeof arr[left] !== 'number' || typeof arr[right] !== 'number') return;
+        if (typeof arr[left] !== 'number' || typeof arr[right] !== 'number') {
+          throw new Error('all iterable items must be of type number');
+        }
         const temp = arr[left];
         arr[left] = arr[right];
         arr[right] = temp;
         left++;
         right--;
-        if (typeof arr[left] !== 'number' || typeof arr[right] !== 'number') return;
+        if (typeof arr[left] !== 'number' || typeof arr[right] !== 'number') {
+          throw new Error('all iterable items must be of type number');
+        }
       }
     }
     return left;
@@ -97,12 +96,6 @@ export default function quick(
   }
   return array;
 }
-
-// test code
-// const a = [4, 6, 8, 3, 2, 1];
-// const b = [{id: 2}, {id: 1}, {id: 0}, {id: -1}];
-// console.log(quick(a));
-// console.log(quick(b, 'id'));
 
 // TODO:
 // allow for key to be provided without providing high/low

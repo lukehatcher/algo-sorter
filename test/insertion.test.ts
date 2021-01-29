@@ -17,16 +17,20 @@ describe('Insertion sort', () => {
     }
     expect(match).toBe(true);
   });
-  it('should return nothing if array containes non number value', () => {
+  it('should throw error if array is empty', () => {
+    expect(() => insertion([])).toThrow(Error);
+    expect(() => insertion([], 'key')).toThrow(Error);
+  });
+  it('should throw error if array containes non number value', () => {
     const exampleArr = [1, 3, 5, 'hello'];
     const exampleArr2 = [1, 3, 5, false];
-    expect(insertion(exampleArr)).toBe(undefined);
-    expect(insertion(exampleArr2)).toBe(undefined);
+    expect(() => insertion(exampleArr)).toThrow(Error);
+    expect(() => insertion(exampleArr2)).toThrow(Error);
   });
-  it('should return nothing if array of objects containes key/val pair with not numerical val', () => {
+  it('should throw error if array of objects containes key/val pair with not numerical val', () => {
     const exampleArr = [{ id: 3 }, { id: 'hello' }, { id: 9 }, { id: 8 }];
     const exampleArr2 = [{ id: 3 }, { id: false }, { id: 9 }, { id: 8 }];
-    expect(insertion(exampleArr, 'id')).toBe(undefined);
-    expect(insertion(exampleArr2, 'id')).toBe(undefined);
+    expect(() => insertion(exampleArr, 'id')).toThrow(Error);
+    expect(() => insertion(exampleArr2, 'id')).toThrow(Error);
   });
 });

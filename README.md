@@ -29,7 +29,7 @@ import algoSorter from 'algo-sorter';
   <head>
   </head>
   <body>
-    <script src="YOUR_PATH_HERE/node_modules/algo-sorter/dist/algoSorter.js"></script>
+    <script src="https://unpkg.com/browse/algo-sorter@1.1.5/dist/"></script>
   </body>
 </html>
 ```
@@ -93,10 +93,8 @@ Pull requests are welcome! Please include tests. Found an error or want to ask a
 
 #### todos
 - [ ] add algos
-- [ ] handle arrays of length zero and non arrays
 - [ ] write tests, add ci
 - [ ] improve api docs
-- [ ] optimize html script tag import with https://unpkg.com/
 - [ ] badges
 - [ ] create repo logo?
 - [ ] up/down

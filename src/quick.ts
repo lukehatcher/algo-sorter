@@ -5,6 +5,7 @@ export default function quick(
   high: number = array.length - 1, // right tarting point for pointers
 ): any[] {
   if (!array.length) throw new Error('must provide a non-empty array');
+  if (!Array.isArray(array)) throw new Error('argument must be of type array');
   if (key) {
     const partition = (arr: number[], left: number, right: number) => {
       const pivot = arr[Math.floor((right + left) / 2)][key]; // middle

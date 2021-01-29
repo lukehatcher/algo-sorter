@@ -1,5 +1,6 @@
 export default function merge(array: any[], key?: string): any[] {
   if (!array.length) throw new Error('must provide a non-empty array');
+  if (!Array.isArray(array)) throw new Error('argument must be of type array');
   if (key) {
     const mergeSortWithKey = (array: any[]): any[] => {
       const midpoint = Math.floor(array.length) / 2;

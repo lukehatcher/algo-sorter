@@ -1,5 +1,6 @@
 export default function insertion(arr: any[], key?: string): any[] {
   if (!arr.length) throw new Error('must provide a non-empty array');
+  if (!Array.isArray(arr)) throw new Error('argument must be of type array');
   if (key) {
     for (let i = 0; i < arr.length; i++) {
       if (!arr[i][key] || typeof arr[i][key] !== 'number') {

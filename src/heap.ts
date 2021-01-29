@@ -1,4 +1,5 @@
 export default function heap(array: any[], key?: string): any[] {
+  if (!array.length) throw new Error('must provide a non-empty array');
   if (key) {
     const heapifyWithKey = (arr: any[], n: number, i: number): void => {
       let largest = i;

@@ -17,16 +17,20 @@ describe('Bubble sort', () => {
     }
     expect(match).toBe(true);
   });
-  it('should return nothing if array containes string', () => {
+  it('should throw error if array is empty', () => {
+    expect(() => bubble([])).toThrow(Error);
+    expect(() => bubble([], 'key')).toThrow(Error);
+  });
+  it('should throw error if array containes non int', () => {
     const exampleArr = [1, 3, 5, 'hello'];
     const exampleArr2 = [1, 3, 5, false];
-    expect(bubble(exampleArr)).toBe(undefined);
-    expect(bubble(exampleArr2)).toBe(undefined);
+    expect(() => bubble(exampleArr)).toThrow(Error);
+    expect(() => bubble(exampleArr2)).toThrow(Error);
   });
-  it('should return nothing if array of objects containes key/val pair with not numerical val', () => {
+  it('should throw error if array of objects containes key/val pair with non int val', () => {
     const exampleArr = [{ id: 3 }, { id: 'hello' }, { id: 9 }, { id: 8 }];
     const exampleArr2 = [{ id: 3 }, { id: true }, { id: 9 }, { id: 8 }];
-    expect(bubble(exampleArr, 'id')).toBe(undefined);
-    expect(bubble(exampleArr2, 'id')).toBe(undefined);
+    expect(() => bubble(exampleArr, 'id')).toThrow(Error);
+    expect(() => bubble(exampleArr2, 'id')).toThrow(Error);
   });
 });

@@ -51,22 +51,22 @@ import algoSorter from 'algo-sorter';
 - counting sort (coming soon)
 
 ## API
-`bubble(array[, key])`<br>
-`insertion(array[, key])`<br>
-`selection(array[, key])`<br>
-`merge(array[, key])`<br>
-`heap(array[, key])`<br>
+`bubble(arr[, key])`<br>
+`insertion(arr[, key])`<br>
+`selection(arr[, key])`<br>
+`merge(arr[, key])`<br>
+`heap(arr[, key])`<br>
 
 parameter | type | required | default | notes
 ----------|------|----------|---------|------
-`array` | number[] or obj[] | y | - | A 1D array of numbers or an array of objects. If an array of objects is passed, a key *must* be provided.
+```arr``` | `number[]` or `obj[]` | y | - | A 1D array of numbers or an array of objects. If an array of objects is passed, a key *must* be provided.
 `key` | string | n | - | The key for the values that the array of objects will be sorted against
 
 `quick(array[, key[, low [, high]]])`<br>
 
 parameter | type | required | default | notes
 ----------|------|----------|---------|------
-`array` | number[] or obj[] | y | - | A 1D array of numbers or an array of objects. If an array of objects is passed, a key *must* be provided.
+`arr` | `number[]` or `obj[]` | y | - | A 1D array of numbers or an array of objects. If an array of objects is passed, a key *must* be provided.
 `key` | string | n | - |The key for the values that the array of objects will be sorted against. If you want to configure the `high` and `low` sorting conditions for an array of numbers you *must* pass `null`.
 `low` | number | n | `0` | The starting index.
 `high` | number | n | `array.length - 1` | The ending index.

@@ -12,7 +12,8 @@ describe('Insertion sort', () => {
     let match = true;
     for (let i = 0; i < exampleArr.length; i++) {
       if (inserted[i].id !== soln[i].id) {
-        match = !match;
+        match = false;
+        break;
       }
     }
     expect(match).toBe(true);

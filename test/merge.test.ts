@@ -19,7 +19,8 @@ describe('merge sort', () => {
     let match = true;
     for (let i = 0; i < exampleArr.length; i++) {
       if (merged[i].id !== soln[i].id) {
-        match = !match;
+        match = false;
+        break;
       }
     }
     expect(match).toBe(true);

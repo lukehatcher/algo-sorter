@@ -72,7 +72,7 @@ quick(array[, sortKey[, low [, high]]])
 parameter | type | required | default | notes
 ----------|------|----------|---------|------
 `arr` | `number[]` or `obj[]` | yes | - | A 1D array of numbers or an array of objects. If an array of objects is passed, a key *must* be provided.
-`sortKey` | `string` | no | - |The key for the values that the array of objects will be sorted against. If you want to configure the `high` and `low` sorting conditions for an array of numbers you *must* pass `null`.
+`sortKey` | `string` | no<sup>*</sup> | - |The key for the values that the array of objects will be sorted against. If you want to configure the `high` and `low` sorting conditions for an array of numbers you *must* pass `null`.
 `low` | `number` | no | `0` | The starting index.
 `high` | `number` | no | `array.length - 1` | The ending index.
 

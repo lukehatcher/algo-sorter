@@ -52,26 +52,27 @@ import algoSorter from 'algo-sorter';
 
 ## API
 ```javascript
-bubble(arr[, key])
+bubble(arr[, sortKey])
+insertion(arr[, sortKey])
+selection(arr[, sortKey])
+merge(arr[, sortKey])
+heap(arr[, sortKey])
 ```
+
+
+parameter | type | required | default | notes
+----------|------|----------|---------|------
+`arr` | `number[]` or `obj[]` | yes | - | A 1D array of numbers or an array of objects. If an array of objects is passed, a key *must* be provided.
+`sortKey` | `string` | no | - | The key for the values that the array of objects will be sorted against
+
 ```javascript
-insertion(arr[, key])
+quick(array[, sortKey[, low [, high]]])
 ```
-`selection(arr[, key])`<br>
-`merge(arr[, key])`<br>
-`heap(arr[, key])`<br>
 
 parameter | type | required | default | notes
 ----------|------|----------|---------|------
 `arr` | `number[]` or `obj[]` | yes | - | A 1D array of numbers or an array of objects. If an array of objects is passed, a key *must* be provided.
-`key` | `string` | no | - | The key for the values that the array of objects will be sorted against
-
-`quick(array[, key[, low [, high]]])`<br>
-
-parameter | type | required | default | notes
-----------|------|----------|---------|------
-`arr` | `number[]` or `obj[]` | yes | - | A 1D array of numbers or an array of objects. If an array of objects is passed, a key *must* be provided.
-`key` | `string` | no | - |The key for the values that the array of objects will be sorted against. If you want to configure the `high` and `low` sorting conditions for an array of numbers you *must* pass `null`.
+`sortKey` | `string` | no | - |The key for the values that the array of objects will be sorted against. If you want to configure the `high` and `low` sorting conditions for an array of numbers you *must* pass `null`.
 `low` | `number` | no | `0` | The starting index.
 `high` | `number` | no | `array.length - 1` | The ending index.
 
@@ -88,8 +89,7 @@ bubble(myArray2, 'myKey'); // [{myKey: 3}, {myKey: 6}, {myKey: 10}]
 
 ## Testing with Node
 ```
-$ git clone https://github.com/lukehatcher/algo-sorter.git
-$ cd algo-sorter && npm i && npm run test
+$ git clone https://github.com/lukehatcher/algo-sorter.git && cd algo-sorter && npm i && npm run test
 ```
 
 ## Contributions and issues

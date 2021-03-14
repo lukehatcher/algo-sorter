@@ -45,6 +45,9 @@ import algoSorter from 'algo-sorter';
 - quick sort
 - merge sort
 
+**randomized algorithms**
+- bogo sort
+
 **coming soon:**
 - radix sort (coming soon)
 - bucket sort (coming soon)
@@ -75,7 +78,7 @@ parameter | type | required | default | notes
 `sortKey` | `string` | no<sup>*</sup> | - |The key for the values that the array of objects will be sorted against. If you want to configure the `high` and `low` sorting conditions for an array of numbers you *must* pass `null`.
 `low` | `number` | no | `0` | The starting index.
 `high` | `number` | no | `array.length - 1` | The ending index.
-* required for arrays of objects only
+\* required for arrays of objects only
 
 ## Example implementation
 ```javascript

@@ -93,8 +93,7 @@ Pull requests are welcome! Please include tests. Found an error or want to ask a
 
 #### todos
 - [ ] add algos
-- [ ] write tests, add ci
+- [ ] add ci
 - [ ] improve api docs
 - [ ] badges
 - [ ] create repo logo?
-- [ ] up/down

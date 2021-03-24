@@ -2,24 +2,19 @@ version: 2.1
 
 jobs:
   build:
-    working_directory: ~/algo-sorter
-    docker:       
-      - image: circleci/node:lts      
+    working_directory: ~/redux-async
+    docker:
+      - image: circleci/node:8
     steps:
       - checkout
-      - run: npm install --production=false
-  test:
-    working_directory: ~/algo-sorter
-    docker:       
-      - image: circleci/node:lts      
-    steps:
-      - checkout
-      - run: npm test
+      - run:
+          name: install deps
+          command: npm install --production=false
+      - run:
+          name: test 
+          command: npm test
 
 workflows:
   algo-sorter-flow:
     jobs:
       - build
-      - test:
-          requires:
-            - build

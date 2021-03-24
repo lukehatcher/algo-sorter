@@ -51,7 +51,6 @@ export default function merge(array: any[], key?: string): any[] {
           right.shift();
         }
         }
-      // add on any extra (if lengths dont match)
       return [...merged, ...left, ...right];
     }
     array = mergeSortNoKey(array);

@@ -1,7 +1,7 @@
 import { quick } from '../src/index';
 
 describe('Quick sort', () => {
-  xit('should numerically order an unordered array', () => {
+  it('should numerically order an unordered array', () => {
     const exampleArr = [2, 3, 5, 6, 4, 2, 8, 1]; // leading 1 works, nothing else
     expect(quick(exampleArr)).toEqual(exampleArr.sort((a, b) => a - b));
   });
@@ -18,9 +18,9 @@ describe('Quick sort', () => {
     }
     expect(match).toBe(true);
   });
-  xit('should handle negative numbers okay', () => {
-    const exampleArr = [-2, 3, 5, 6, 4, 2, 8, 1];
-    expect(quick(exampleArr)).toEqual(exampleArr.sort((a, b) => a - b));
+  it('should handle negative numbers okay', () => {
+    const exampleArr = [-2, 3, -5, 6, 4, 2, 8, 1];
+    expect(quick(exampleArr, null)).toEqual(exampleArr.sort((a, b) => a - b));
   });
   it('should throw error if array is empty', () => {
     expect(() => quick([])).toThrow(Error);

@@ -50,13 +50,12 @@ export default function quick(
   }
   // if no key provided
   const partition = (arr: number[], left: number, right: number) => {
-    const pivot = arr[Math.floor((right + left) / 2)]; // middle
+    const pivot = arr[Math.floor((right + left) / 2)];
     if (typeof pivot !== 'number') {
       throw new Error('all iterable items must be of type number');
     }
 
     while (left <= right) {
-      // if (typeof arr[left] !== 'number' || typeof arr[right] !== 'number') return;
       while (arr[left] < pivot) {
         if (typeof arr[left] !== 'number') {
           throw new Error('all iterable items must be of type number');
@@ -79,9 +78,6 @@ export default function quick(
         arr[right] = temp;
         left++;
         right--;
-        if (typeof arr[left] !== 'number' || typeof arr[right] !== 'number') {
-          throw new Error('all iterable items must be of type number');
-        }
       }
     }
     return left;

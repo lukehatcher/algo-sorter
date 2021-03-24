@@ -7,7 +7,7 @@ jobs:
       - image: circleci/node:lts      
     steps:
       - checkout
-      - run: npm install
+      - run: npm install --production=false
   test:
     working_directory: ~/algo-sorter
     docker:       

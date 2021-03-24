@@ -5,6 +5,7 @@ import quick from './quick';
 import merge from './merge';
 import heap from './heap';
 import bogo from './bogo';
+import counting from './counting';
 
 export {
   bubble,
@@ -14,4 +15,5 @@ export {
   merge,
   heap,
   bogo,
+  counting,
 }

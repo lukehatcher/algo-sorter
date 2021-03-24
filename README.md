@@ -46,6 +46,7 @@ import algoSorter from 'algo-sorter';
 **divide and conqure algorithms:**
 - quick sort
 - merge sort
+- counting sort
 
 **randomized algorithms**
 - bogo sort
@@ -53,7 +54,6 @@ import algoSorter from 'algo-sorter';
 **coming soon:**
 - radix sort (coming soon)
 - bucket sort (coming soon)
-- counting sort (coming soon)
 
 ## API
 ```javascript
@@ -63,6 +63,7 @@ selection(arr[, sortKey])
 merge(arr[, sortKey])
 heap(arr[, sortKey])
 bogo(arr, [, sortKey])
+counting(arr, [, sortKey])
 ```
 
 parameter | type | required | default | notes
@@ -103,7 +104,7 @@ $ git clone https://github.com/lukehatcher/algo-sorter.git && cd algo-sorter && 
 Pull requests are welcome! Please include tests. Found an error or want to ask a question? Open an [issue](https://github.com/lukehatcher/algo-sorter/issues) and/or visit the [discussion boards](https://github.com/lukehatcher/algo-sorter/discussions)!
 
 #### todos
-- [ ] add algos
+- [ ] add more algos
 - [ ] improve api docs
 - [ ] create repo logo
 - [ ] add notes on time complexities

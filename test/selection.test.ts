@@ -18,9 +18,9 @@ describe('Selection sort', () => {
     }
     expect(match).toBe(true);
   });
-  it('should throw error if array is empty', () => {
-    expect(() => selection([])).toThrow(Error);
-    expect(() => selection([], 'key')).toThrow(Error);
+  it('should handle negative numbers okay', () => {
+    const exampleArr = [-4, 3, 5, 6, 4, 2, 8, 1];
+    expect(selection(exampleArr)).toEqual(exampleArr.sort((a, b) => a - b));
   });
   it('should throw error if array containes string', () => {
     const exampleArr = [1, 3, 5, 'hello'];

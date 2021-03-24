@@ -2,7 +2,7 @@ import { merge } from '../src/index';
 
 describe('merge sort', () => {
   it('should numerically order an unordered array', () => {
-    const exampleArr = [1, 3, 5, 9, 4, 2, 8, 1];
+    const exampleArr = [2, 3, 5, 9, 4, 2, 8, 1];
 
     // only passed test if these two log statments are fired
 
@@ -24,6 +24,10 @@ describe('merge sort', () => {
       }
     }
     expect(match).toBe(true);
+  });
+  xit('should handle negative numbers okay', () => {
+    const exampleArr = [2, -3, 5, 6, 4, 2, 8, 1];
+    expect(merge(exampleArr)).toEqual(exampleArr.sort((a, b) => a - b));
   });
   it('should throw error if array is empty', () => {
     expect(() => merge([])).toThrow(Error);

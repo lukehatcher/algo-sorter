@@ -18,6 +18,10 @@ describe('Insertion sort', () => {
     }
     expect(match).toBe(true);
   });
+  it('should handle negative numbers okay', () => {
+    const exampleArr = [-2, 3, 5, 6, 4, 2, 8, 1];
+    expect(insertion(exampleArr)).toEqual(exampleArr.sort((a, b) => a - b));
+  });
   it('should throw error if array is empty', () => {
     expect(() => insertion([])).toThrow(Error);
     expect(() => insertion([], 'key')).toThrow(Error);

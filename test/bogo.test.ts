@@ -22,6 +22,10 @@ describe('Bubble sort', () => {
     expect(() => bogo([])).toThrow(Error);
     expect(() => bogo([], 'key')).toThrow(Error);
   });
+  it('should handle negative numbers okay', () => {
+    const exampleArr = [-1, 3, 2];
+    expect(bogo(exampleArr)).toEqual(exampleArr.sort((a, b) => a - b));
+  });
   it('should throw error if array containes non int', () => {
     const exampleArr = [1, 3, 5, 'hello'];
     const exampleArr2 = [1, 3, 5, false];

@@ -3,7 +3,7 @@ import { bubble } from '../src/index';
 describe('Bubble sort', () => {
   it('should numerically order an unordered array', () => {
     const exampleArr = [1, 3, 5, 6, 4, 2, 8, 1];
-    expect(bubble(exampleArr)).toEqual(exampleArr.sort());
+    expect(bubble(exampleArr)).toEqual(exampleArr.sort((a, b) => a - b));
   });
   it('should numerically order an unordered array of objects', () => {
     const exampleArr = [{ id: 3 }, { id: 1 }, { id: 9 }, { id: 8 }];
@@ -17,6 +17,10 @@ describe('Bubble sort', () => {
       }
     }
     expect(match).toBe(true);
+  });
+  it('should handle negative numbers okay', () => {
+    const exampleArr = [-2, 3, 5, 6, 4, 2, 8, 1];
+    expect(bubble(exampleArr)).toEqual(exampleArr.sort((a, b) => a - b));
   });
   it('should throw error if array is empty', () => {
     expect(() => bubble([])).toThrow(Error);

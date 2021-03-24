@@ -20,7 +20,7 @@ describe('Quick sort', () => {
   });
   it('should handle negative numbers okay', () => {
     const exampleArr = [-2, 3, -5, 6, 4, 2, 8, 1];
-    expect(quick(exampleArr, null)).toEqual(exampleArr.sort((a, b) => a - b));
+    expect(quick(exampleArr)).toEqual(exampleArr.sort((a, b) => a - b));
   });
   it('should throw error if array is empty', () => {
     expect(() => quick([])).toThrow(Error);

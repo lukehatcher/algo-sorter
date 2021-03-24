@@ -9,7 +9,7 @@ describe('merge sort', () => {
     console.log(exampleArr.sort());
     console.log(merge(exampleArr));
     
-    expect(merge(exampleArr)).toEqual(exampleArr.sort());
+    expect(merge(exampleArr)).toEqual(exampleArr.sort((a, b) => a - b));
 
   });
   it('should numerically order an unordered array of objects', () => {

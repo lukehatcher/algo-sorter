@@ -3,7 +3,7 @@ import { bogo } from '../src/index';
 describe('Bubble sort', () => {
   it('should numerically order an unordered array', () => {
     const exampleArr = [1, 3, 2];
-    expect(bogo(exampleArr)).toEqual(exampleArr.sort());
+    expect(bogo(exampleArr)).toEqual(exampleArr.sort((a, b) => a - b));
   });
   it('should numerically order an unordered array of objects', () => {
     const exampleArr = [{ id: 3 }, { id: 1 }, { id: 2 }];

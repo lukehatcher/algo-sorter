@@ -3,7 +3,7 @@ import { insertion } from '../src/index';
 describe('Insertion sort', () => {
   it('should numerically order an unordered array', () => {
     const exampleArr = [1, 3, 5, 6, 4, 2, 8, 1];
-    expect(insertion(exampleArr)).toEqual(exampleArr.sort());
+    expect(insertion(exampleArr)).toEqual(exampleArr.sort((a, b) => a - b));
   });
   it('should numerically order an unordered array of objects', () => {
     const exampleArr = [{ id: 3 }, { id: 1 }, { id: 9 }, { id: 8 }];

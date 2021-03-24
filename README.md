@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/lukehatcher/algo-sorter.svg?style=svg&circle-token=2591f999e260b22f290c615fb4bd91de4aa7c3ef)](https://app.circleci.com/pipelines/github/lukehatcher/algo-sorter?branch=master)
+[![CircleCI](https://circleci.com/gh/lukehatcher/algo-sorter.svg?style=shield&circle-token=2591f999e260b22f290c615fb4bd91de4aa7c3ef)](https://app.circleci.com/pipelines/github/lukehatcher/algo-sorter?branch=master)
 
 # algoSorter
 *sort arrays using your algorithm of choice*

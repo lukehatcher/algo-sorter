@@ -4,8 +4,7 @@ describe('merge sort', () => {
   it('should numerically order an unordered array', () => {
     const exampleArr = [2, 3, 5, 9, 4, 2, 8, 1];
 
-    // only passed test if these two log statments are fired
-
+    // only passes test if these two log statments are fired
     console.log(exampleArr.sort());
     console.log(merge(exampleArr));
     
@@ -25,8 +24,13 @@ describe('merge sort', () => {
     }
     expect(match).toBe(true);
   });
-  xit('should handle negative numbers okay', () => {
+  it('should handle negative numbers okay', () => {
     const exampleArr = [2, -3, 5, 6, 4, 2, 8, 1];
+
+    // only passes test if these two log statments are fired
+    console.log(exampleArr.sort());
+    console.log(merge(exampleArr));
+    
     expect(merge(exampleArr)).toEqual(exampleArr.sort((a, b) => a - b));
   });
   it('should throw error if array is empty', () => {

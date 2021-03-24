@@ -10,6 +10,9 @@ test/
 coverage/
 jest.config.js
 
+# ci/cd
+.circleci
+
 # linting
 .eslintrc.js
 

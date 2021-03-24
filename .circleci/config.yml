@@ -1,7 +1,25 @@
 version: 2.1
-orbs:
-  node: circleci/node@3.0.0
+
+jobs:
+  build:
+    working_directory: ~/algo-sorter
+    docker:       
+      - image: circleci/node:lts      
+    steps:
+      - checkout
+      - run: npm install
+  test:
+    working_directory: ~/algo-sorter
+    docker:       
+      - image: circleci/node:lts      
+    steps:
+      - checkout
+      - run: npm test
+
 workflows:
-  node-tests:
+  algo-sorter-flow:
     jobs:
-      - node/test
+      - build
+      - test:
+          requires:
+            - build

@@ -3,8 +3,8 @@
 # algoSorter
 *sort arrays using your algorithm of choice*
 
-- works with numeric arrays as well as arrays of objects
-- Compatible with JavaScript, TypeScript, Node.js and the browser.
+- Works with numeric arrays as well as arrays of objects
+- Compatible with Node.js, TypeScript, and the browser
 
 ## Installation
 with npm:
@@ -94,7 +94,7 @@ bubble(myArray); // [3, 6, 10]
 bubble(myArray2, 'myKey'); // [{myKey: 3}, {myKey: 6}, {myKey: 10}]
 ```
 
-## Testing with Node
+## Testing locally
 ```
 $ git clone https://github.com/lukehatcher/algo-sorter.git && cd algo-sorter && npm i && npm run test
 ```
@@ -104,7 +104,6 @@ Pull requests are welcome! Please include tests. Found an error or want to ask a
 
 #### todos
 - [ ] add algos
-- [ ] add ci
 - [ ] improve api docs
-- [ ] badges
 - [ ] create repo logo
+- [ ] add notes on time complexities
